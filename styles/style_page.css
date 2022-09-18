@@ -4,13 +4,6 @@ ul {
   padding: 0;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
 .container {
   box-sizing: border-box;
   display: flex;
@@ -26,7 +19,6 @@ body {
   transform: translate(-50%, -50%);
   align-items: flex-start;
   padding: 50px;
-  gap: 25px;
   width: 1140px;
   height: 624px;
   background: #ffffff;
@@ -270,13 +262,19 @@ a {
   gap: 10px;
   width: 245px;
   height: 36px;
-  background: #ec1630;
+  background-color: #ec1630;
   border-radius: 25px;
   flex: none;
   order: 1;
   flex-grow: 0;
   border: none;
   margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.container_pay__button:hover {
+  background-color: #c4c4c4;
 }
 
 .container_pay__button-text {
@@ -309,44 +307,38 @@ a {
   margin-top: -58px;
 }
 
-.svg_pen__one {
-  z-index: 1;
+#svg_pen__one {
   position: absolute;
   margin-left: 532px;
   margin-right: 610.5px;
   margin-top: 420px;
   margin-bottom: 267px;
-  visibility: visible;
 }
 
-.svg_pen__two {
-  z-index: 1;
+#svg_pen__two {
   position: absolute;
   margin-left: 750px;
   margin-right: 608.5px;
   margin-top: 420px;
   margin-bottom: 267px;
-  visibility: visible;
 }
 
-.svg_plus__one {
+#svg_plus__one {
   z-index: 1;
   position: absolute;
-  margin-left: 487px;
-  margin-right: 609.5px;
+  margin-left: 485px;
+  margin-right: 610px;
   margin-top: 415px;
-  margin-bottom: 195px;
-  visibility: visible;
+  margin-bottom: 193px;
 }
 
-.svg_plus__two {
+#svg_plus__two {
   z-index: 1;
   position: absolute;
-  margin-left: 705px;
-  margin-right: 608.5px;
+  margin-left: 702px;
+  margin-right: 606px;
   margin-top: 490px;
-  margin-bottom: 269px;
-  visibility: visible;
+  margin-bottom: 268px;
 }
 
 .svg_one {
@@ -361,38 +353,172 @@ a {
   margin-left: 45px;
 }
 
-.svg_upload__one {
+#svg_upload__one {
   position: absolute;
   z-index: 1;
   margin-top: 210px;
   margin-right: 125px;
   cursor: pointer;
-  visibility: visible;
 }
 
-.svg_upload__two {
+#svg_upload__two {
   position: absolute;
   z-index: 1;
   margin-top: 210px;
   margin-left: 100px;
   cursor: pointer;
-  visibility: visible;
 }
 
-.svg_check__one {
+#svg_check__one {
   position: absolute;
   z-index: 1;
   margin-top: 210px;
   margin-right: 125px;
   cursor: pointer;
-  visibility: hidden;
 }
 
-.svg_check__two {
+#svg_check__two {
   position: absolute;
   z-index: 1;
   margin-top: 210px;
   margin-left: 100px;
   cursor: pointer;
+}
+
+.upload_button {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.popup {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.popup_one {
   visibility: hidden;
+}
+
+.popup_one_active {
+  visibility: visible;
+}
+
+.popup_two {
+  visibility: hidden;
+}
+
+.popup_two_active {
+  visibility: visible;
+}
+
+.popup_container {
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 61px 3px rgba(0, 0, 0, 0.61);
+}
+
+.popup_container__text {
+  color: #131718;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.popup_button {
+  position: relative;
+  width: 110px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 14px;
+  vertical-align: middle;
+  color: rgb(255 255 255);
+  text-align: center;
+  background-color: #ec1630;
+  line-height: 30px;
+  box-sizing: border-box;
+  border: none;
+  transition: background-color 0.2s;
+  border-radius: 25px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.popup_button:hover {
+  background-color: #c4c4c4;
+}
+
+.button_popup {
+  display: flex;
+  margin: 8px;
+  justify-content: space-between;
+}
+
+.check_one {
+  visibility: hidden;
+}
+
+.check_one__active {
+  visibility: visible;
+}
+
+.upload_one {
+  visibility: hidden;
+}
+
+.upload_one_active {
+  visibility: visible;
+}
+
+.upload_two {
+  visibility: hidden;
+}
+
+.upload_two_active {
+  visibility: visible;
+}
+
+.pen_one {
+  z-index: 1;
+}
+
+.pen_one_active {
+  z-index: 999;
+}
+
+.check_two {
+  visibility: hidden;
+}
+
+.check_two__active {
+  visibility: visible;
+}
+
+.pen_two {
+  z-index: 1;
+}
+
+.pen_two_active {
+  z-index: 9999;
 }

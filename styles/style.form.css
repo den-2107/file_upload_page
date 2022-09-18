@@ -1,0 +1,71 @@
+.input-file-row {
+  display: inline-block;
+}
+.input-file {
+  position: relative;
+  display: inline-block;
+}
+.input-file span {
+  position: relative;
+  width: 120px;
+  height: 35px;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 14px;
+  vertical-align: middle;
+  color: rgb(255 255 255);
+  text-align: center;
+  background-color: #ec1630;
+  line-height: 35px;
+  box-sizing: border-box;
+  border: none;
+  transition: background-color 0.2s;
+  border-radius: 25px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.input-file input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.input-file:hover span {
+  background-color: #c4c4c4;
+}
+.input-file:active span {
+  background-color: #c4c4c4;
+}
+
+.input-file input[type="file"]:disabled + span {
+  background-color: #eee;
+}
+
+.input-file-list {
+  padding: 10px 0;
+}
+.input-file-list-item {
+  margin-bottom: 10px;
+}
+.input-file-list-remove {
+  color: red;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.input-file-list-name {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.popup_form {
+  text-align: center;
+}

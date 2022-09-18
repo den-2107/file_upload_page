@@ -3,7 +3,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>Подача апелляции</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="styles/style_page.css" type="text/css" />
+    <link rel="stylesheet" href="styles/style.form.css" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
@@ -48,7 +49,6 @@
           </div>
         </div>
       </div>
-
       <div class="container_download__scan">
         <p class="container_download__scan-text">
           ОТСКАНИРУЙТЕ И ЗАГРУЗИТЕ заполненные заявления
@@ -61,16 +61,16 @@
         <div class="svg_doc__one">
           <img alt="" src="./svg_image/doc_two.svg" />
         </div>
-        <div class="svg_pen__one">
+        <div id="svg_pen__one" class="pen_one">
           <img alt="" src="./svg_image/pen.svg" />
         </div>
-        <div class="svg_pen__two">
+        <div id="svg_pen__two" class="pen_two">
           <img alt="" src="./svg_image/pen.svg" />
         </div>
-        <div class="svg_plus__one">
+        <div id="svg_plus__one">
           <img alt="" src="./svg_image/plus.svg" />
         </div>
-        <div class="svg_plus__two">
+        <div id="svg_plus__two">
           <img alt="" src="./svg_image/plus.svg" />
         </div>
         <div class="svg_one">
@@ -79,20 +79,20 @@
         <div class="svg_two">
           <img alt="" src="./svg_image/two.svg" />
         </div>
-        <div class="svg_upload__one">
-          <a href="#">
+        <div id="svg_upload__one" class="upload_one upload_one_active">
+          <button id="upload_button_one" class="upload_button">
             <img alt="" src="./img/upload.png" />
-          </a>
+          </button>
         </div>
-        <div class="svg_upload__two">
-          <a href="#">
+        <div id="svg_upload__two" class="upload_two upload_two_active">
+          <button id="upload_button_two" class="upload_button">
             <img alt="" src="./img/upload.png" />
-          </a>
+          </button>
         </div>
-        <div class="svg_check__one">
+        <div id="svg_check__one" class="check_one">
           <img alt="" src="./svg_image/check.svg" />
         </div>
-        <div class="svg_check__two">
+        <div id="svg_check__two" class="check_two">
           <img alt="" src="./svg_image/check.svg" />
         </div>
       </div>
@@ -113,5 +113,54 @@
         </p>
       </div>
     </div>
+    <div class="popup popup_one">
+      <div class="popup_container">
+        <p class="popup_container__text">
+          Загрузка заявления <br />
+          Файл 1
+        </p>
+        <div class="popup_form">
+          <form method="post" enctype="multipart/form-data">
+            <div class="input-file-row">
+              <label class="input-file">
+                <input type="file" name="file[]" multiple />
+                <span>Выберите файл</span>
+              </label>
+              <div class="input-file-list"></div>
+            </div>
+          </form>
+        </div>
+        <div class="button_popup">
+          <button id="send_one" class="popup_button">Добавить</button>
+          <button id="close_one" class="popup_button">Закрыть</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup_two">
+      <div class="popup_container">
+        <p class="popup_container__text">
+          Загрузка заявления <br />
+          Файл 2
+        </p>
+        <div class="popup_form">
+          <form method="post" enctype="multipart/form-data">
+            <div class="input-file-row">
+              <label class="input-file">
+                <input type="file" name="file[]" multiple />
+                <span>Выберите файл</span>
+              </label>
+              <div class="input-file-list"></div>
+            </div>
+          </form>
+        </div>
+        <div class="button_popup">
+          <button id="send_two" class="popup_button">Добавить</button>
+          <button id="close_two" class="popup_button">Закрыть</button>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/libs/jquery-3.6.1.min.js"></script>
+    <script src="scripts/script_form__send.js"></script>
+    <script src="./scripts/script_form__button.js"></script>
   </body>
 </html>
